@@ -1,0 +1,47 @@
+@{
+    var orderHistory = ViewBag.OrderHistory as List<Cafeteria.Controllers.OrderHistoryViewModel>;
+}
+
+<h1>Order History</h1>
+
+@if (orderHistory != null && orderHistory.Count > 0)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Total</th>
+                <th>Itens</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in orderHistory)
+            {
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Data: @order.OrderDate</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Total: R$ @order.TotalAmount</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            @foreach (var item in order.Items)
+                            {
+                                <li>@item.ProductName - Quantidade: @item.Quantity - Preço:- R$ @item.Price</li>
+                            }
+                        </ul>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Não há pedidos registrados.</p>
+}

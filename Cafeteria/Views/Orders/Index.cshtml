@@ -1,0 +1,85 @@
+@model IEnumerable<Cafeteria.Models.Product>
+
+@{
+    ViewData["Title"] = "Orders";
+    decimal totalPedido = ViewBag.TotalPedido ?? 0; // Total calculado no controlador
+    var currentOrder = ViewBag.CurrentOrder as Dictionary<int, int> ?? new Dictionary<int, int>();
+}
+
+<h1>Orders</h1>
+
+<p>
+    <a asp-action="OrderHistory">Registro de Pedidos</a>
+</p>
+
+@if (currentOrder.Any())
+{
+    <ul>
+        <p>Pedido atual:</p>
+        @foreach (var item in currentOrder)
+        {
+            var product = Model.FirstOrDefault(p => p.Id == item.Key);
+            if (product != null)
+            {
+                <li>@product.Name - Quantidade: @item.Value</li>
+            }
+        }
+        <p>Total do Pedido: R$ @totalPedido</p>
+        <!-- Fechar o pedido e manda para pagina de registro de pedidos -->
+        <form asp-action="CloseOrder" method="post">
+            <button type="submit" class="btn btn-success">Fechar Pedido</button>
+        </form>
+        <!-- Limpa action lista (foreach) -->
+        <button type="submit" class="btn btn-danger" style="height: 60px; width: 120px;"> Limpar carrinho </button>
+    </ul>
+}
+else
+{
+    <p>Nenhum produto adicionado :(</p>
+}
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.ErrorMessage
+    </div>
+}
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome do Produto</th>
+                <th>Preço</th>
+                <th>Estoque</th>
+                <th>Quantidade no Pedido atual</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Price</td>
+                    <td>@product.Quantity</td>
+                    <td>@(currentOrder.ContainsKey(product.Id) ? currentOrder[product.Id] : 0)</td>
+                    <td>
+                        <!-- Formulário para adicionar ou remover produto do pedido -->
+                        <form asp-action="ProcessOrder" method="post" class="form-inline" style="display:inline;">
+                            <input type="hidden" name="productId" value="@product.Id" />
+
+                            <!-- Botão de Adicionar -->
+                            <button type="submit" name="action" value="add" class="btn btn-primary"
+                                style="height: 50px; width: 100px;"> + </button>
+
+                            <!-- Botão de Remover -->
+                            <button type="submit" name="action" value="remove" class="btn btn-danger"
+                                style="height: 50px; width: 100px;"> - </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

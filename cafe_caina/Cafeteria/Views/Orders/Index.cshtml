@@ -1,0 +1,44 @@
+@model IEnumerable<Cafeteria.Models.Product>
+
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<h1>Orders</h1>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.ErrorMessage
+    </div>
+}
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Stock</th>
+                <th>Order Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Quantity</td>
+                <td>
+                    <form asp-action="ProcessOrder" method="post" class="form-inline">
+                        <input type="hidden" name="productId" value="@product.Id" />
+                        <div class="input-group" style="display: flex; align-items: center;">
+                            <input type="number" name="quantity" min="1" max="@product.Quantity" required class="form-control" style="width: 50px; margin-right: 5px;" />
+                            <button type="submit" class="btn btn-primary" style="width: 80px;">Order</button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

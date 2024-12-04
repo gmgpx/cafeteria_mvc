@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center" style="text-align: center; margin-top: 20vh;">
+    <h1 class="display-4 blink" style="font-size: 3rem;">- Central de Pedidos -</h1>
+    <h2>Cafeteria da Fran</h2>
+
+    <a href="http://localhost:5217/Products">Products</a> -
+    <a href="http://localhost:5217/Products">Orders</a> -
+    <a href="http://localhost:5217/Products">Privacy</a>
+
+    <style>
+        /* Animação de piscar */
+        @@keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0; }
+        }
+
+        .blink {
+            animation: blink 5.5s infinite;
+        }
+    </style>
+</div>
