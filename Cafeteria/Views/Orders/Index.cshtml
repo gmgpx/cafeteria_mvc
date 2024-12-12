@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "Orders";
-    decimal totalPedido = ViewBag.TotalPedido ?? 0; // Total calculado no controlador
+    decimal totalPedido = ViewBag.TotalPedido ?? 0;
     var currentOrder = ViewBag.CurrentOrder as Dictionary<int, int> ?? new Dictionary<int, int>();
 }
 
@@ -25,12 +25,18 @@
             }
         }
         <p>Total do Pedido: R$ @totalPedido</p>
-        <!-- Fechar o pedido e manda para pagina de registro de pedidos -->
-        <form asp-action="CloseOrder" method="post">
-            <button type="submit" class="btn btn-success">Fechar Pedido</button>
-        </form>
-        <!-- Limpa action lista (foreach) -->
-        <button type="submit" class="btn btn-danger" style="height: 60px; width: 120px;"> Limpar carrinho </button>
+
+        <div style="display: flex; gap: 10px; margin-top: 10px;">
+            <form asp-action="CloseOrder" method="post" style="display: inline;">
+                <!-- Fechar o pedido e manda para pagina de registro de pedidos -->
+                <button type="submit" class="btn btn-success" style="height: 50px; width: 100px;"> Concluir </button>
+            </form>
+            <form asp-action="ClearOrder" method="post" style="display: inline;">
+                <!-- Limpa action lista (foreach) -->
+                <button type="submit" class="btn btn-danger" style="height: 50px; width: 100px;"> Limpar </button>
+            </form>
+        </div>
+        
     </ul>
 }
 else

@@ -127,6 +127,14 @@ namespace Cafeteria.Controllers
             // Retorna para a tela de histórico
             return RedirectToAction(nameof(OrderHistory));
         }
+        // POST: Orders/ClearOrder
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ClearOrder()
+        {
+            _currentOrder.Clear(); // Limpa o pedido atual
+            return RedirectToAction(nameof(Index)); // Retorna à página de pedidos
+        }
 
         // GET: Orders/OrderHistory
         public IActionResult OrderHistory()

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gustavo Monteiro\\Desktop\\cafe_do_gusta\\Cafeteria\\Cafeteria.csproj": {}
+    "C:\\Users\\Gustavo Monteiro\\Desktop\\cafe_do_gusta\\cafeteria_mvc\\Cafeteria\\Cafeteria.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gustavo Monteiro\\Desktop\\cafe_do_gusta\\Cafeteria\\Cafeteria.csproj": {
+    "C:\\Users\\Gustavo Monteiro\\Desktop\\cafe_do_gusta\\cafeteria_mvc\\Cafeteria\\Cafeteria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gustavo Monteiro\\Desktop\\cafe_do_gusta\\Cafeteria\\Cafeteria.csproj",
+        "projectUniqueName": "C:\\Users\\Gustavo Monteiro\\Desktop\\cafe_do_gusta\\cafeteria_mvc\\Cafeteria\\Cafeteria.csproj",
         "projectName": "Cafeteria",
-        "projectPath": "C:\\Users\\Gustavo Monteiro\\Desktop\\cafe_do_gusta\\Cafeteria\\Cafeteria.csproj",
+        "projectPath": "C:\\Users\\Gustavo Monteiro\\Desktop\\cafe_do_gusta\\cafeteria_mvc\\Cafeteria\\Cafeteria.csproj",
         "packagesPath": "C:\\Users\\Gustavo Monteiro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gustavo Monteiro\\Desktop\\cafe_do_gusta\\Cafeteria\\obj\\",
+        "outputPath": "C:\\Users\\Gustavo Monteiro\\Desktop\\cafe_do_gusta\\cafeteria_mvc\\Cafeteria\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

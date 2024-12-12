@@ -8037,11 +8037,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gustavo Monteiro\\Desktop\\cafe_do_gusta\\Cafeteria\\Cafeteria.csproj",
+      "projectUniqueName": "C:\\Users\\Gustavo Monteiro\\Desktop\\cafe_do_gusta\\cafeteria_mvc\\Cafeteria\\Cafeteria.csproj",
       "projectName": "Cafeteria",
-      "projectPath": "C:\\Users\\Gustavo Monteiro\\Desktop\\cafe_do_gusta\\Cafeteria\\Cafeteria.csproj",
+      "projectPath": "C:\\Users\\Gustavo Monteiro\\Desktop\\cafe_do_gusta\\cafeteria_mvc\\Cafeteria\\Cafeteria.csproj",
       "packagesPath": "C:\\Users\\Gustavo Monteiro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gustavo Monteiro\\Desktop\\cafe_do_gusta\\Cafeteria\\obj\\",
+      "outputPath": "C:\\Users\\Gustavo Monteiro\\Desktop\\cafe_do_gusta\\cafeteria_mvc\\Cafeteria\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -8134,7 +8134,7 @@
       "code": "NU1902",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "O pacote 'Azure.Identity' 1.10.3 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
+      "message": "Package 'Azure.Identity' 1.10.3 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net8.0"
@@ -8144,7 +8144,7 @@
       "code": "NU1902",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "O pacote 'Azure.Identity' 1.10.3 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-wvxc-855f-jvrv",
+      "message": "Package 'Azure.Identity' 1.10.3 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-wvxc-855f-jvrv",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net8.0"
@@ -8154,7 +8154,7 @@
       "code": "NU1902",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "O pacote 'Microsoft.Identity.Client' 4.56.0 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
+      "message": "Package 'Microsoft.Identity.Client' 4.56.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
       "libraryId": "Microsoft.Identity.Client",
       "targetGraphs": [
         "net8.0"
@@ -8164,7 +8164,7 @@
       "code": "NU1901",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "O pacote 'Microsoft.Identity.Client' 4.56.0 tem uma baixa vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-x674-v45j-fwxw",
+      "message": "Package 'Microsoft.Identity.Client' 4.56.0 has a known low severity vulnerability, https://github.com/advisories/GHSA-x674-v45j-fwxw",
       "libraryId": "Microsoft.Identity.Client",
       "targetGraphs": [
         "net8.0"
@@ -8174,7 +8174,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "O pacote 'System.Text.Json' 7.0.3 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-hh2w-p6rv-4g7w",
+      "message": "Package 'System.Text.Json' 7.0.3 has a known high severity vulnerability, https://github.com/advisories/GHSA-hh2w-p6rv-4g7w",
       "libraryId": "System.Text.Json",
       "targetGraphs": [
         "net8.0"
